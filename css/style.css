@@ -1,0 +1,386 @@
+
+html,
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100%;
+  position: relative;
+}
+
+input {
+  font-size: 12px;
+}
+
+h1 {
+  color: white;
+  font-size: 22px;
+  margin: 5%;
+  text-align: center;
+}
+
+h3 {
+  margin: auto;
+}
+
+h4 {
+  color:white;
+  margin: auto;
+  margin-top: 10px;
+}
+
+h5 {
+  font-size: 1em;
+  color: #1f1a4f;
+  text-align: center;
+}
+
+#hide-listings,
+#show-listings {
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  color: #1f1a4f;
+  margin: auto;
+  font-weight: bold;
+  font-size: 0.7em;
+  }
+
+#map {
+  bottom:0px;
+  height: 100%;
+  left:0px;
+  right: 0px;
+  transition: margin-left .5s;
+
+}
+
+.options-box {
+  background: #c82027;
+  border: 1px solid #1f1a4f;
+  border-radius: 3px;
+  height: 90%;
+  line-height: 35px;
+  text-align: center;
+  width: 100%;
+  color: #1f1a4f;
+  overflow-y: scroll;
+  padding-bottom: 2em;
+  bottom: 0;
+}
+
+
+/* The side navigation menu */
+
+.sidenav {
+    height: 92%; /* 95% of Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #1f1a4f;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position:absolute;
+  color:white;
+  font-size: 20px;
+  top: 1%;
+  right: 1%;
+  float: right;
+  align-self: center;
+  background-color: #c82027;
+  border-radius: 50%;
+}
+
+.menuImg {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+ }
+
+ .newButton {
+   position: absolute;
+   top:50px;
+   left:20px;
+   border: 0.1em solid #c82027;
+   background-color: #1f1a4f;
+   color:white;
+   font-weight: bolder;
+   font-size: 2em;
+   border-radius: 50%;
+   padding:3%;
+
+ }
+
+.locationList {
+  font-size: 20px;
+  border: 1px;
+  border-color: #fcd42b;
+}
+
+.blockList {
+  margin-top: 170px;
+}
+
+.listItem {
+  border: 1px solid indigo;
+  color: white;
+  width:80%;
+  font-size: 0.6em;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display:block;
+  text-align: center;
+  background-color: #1f1a4f;
+  height: 5%;
+  cursor: pointer;
+}
+
+.listItem:hover, .listItem:focus {
+    background-color: indigo;
+}
+
+.optionItem {
+  border: 1px solid yellow;
+  color: #1f1a4f;
+  background-color: white;
+  width:45%;
+  font-size: 0.6em;
+  list-style-type: none;
+  list-style: unset;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 2px;
+  left:0;
+  display: inline-block;
+  text-align: center;
+  height:40%;
+}
+
+.optionBlock {
+  list-style-type: none;
+  padding:0;
+  float:right;
+}
+
+.optionItem:hover, .optionItem:focus {
+    background-color: #fcd42b;
+}
+
+.dropbtn {
+    background-color: #1f1a4f;
+    font-weight: bold;
+    color: white;
+    padding: 5%;
+    width:100%;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: indigo;
+ }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width:80%;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    list-style: none;
+    list-style-type: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #c82027;
+    min-width: 160px;
+    overflow: auto;
+    width:100%;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropOption {
+    align-self: center;
+    color: white;
+    background-color: #1f1a4f;
+    text-decoration: none;
+    display: block;
+    font-size: 0.6em;
+    width: 95%;
+    padding:0;
+    border: 0.5px dashed white;
+    cursor: pointer;
+    }
+
+#myDropdown {
+  align-items: center;
+}
+
+.dropOption:hover, .dropOption:focus {
+    background-color: indigo;
+    color:white;
+ }
+
+.show {display:block;}
+
+#panot {
+    margin:auto;
+    width: 18em;
+    height: 15em;
+}
+
+#windowContent {
+  align-items: center;
+  overflow-x: hidden;
+  padding-bottom: 20px;
+}
+
+#siteDesc {
+  margin: auto;
+  text-align: center;
+  padding:3%;
+  width:18em;
+  overflow-x: hidden;
+}
+
+#newsScreen {
+  position:absolute;
+  left: 10px;
+  bottom: 100px;
+  background-color: #1f1a4f;
+  width:20em;
+  height:18em;
+  color:white;
+  text-align: center;
+  padding: 3% 1% 1% 1%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+ }
+
+#newsOn {
+  color:#1f1a4f;
+  background-color: #fcd42b;
+  position: absolute;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  bottom:0;
+  }
+
+#nytimes-header {
+  color: #fcd42b;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+#nytimes-articles {
+  list-style-type: square;
+  color:white;
+  font-size: 0.85em;
+}
+
+#closeNewsScreen {
+  position:absolute;
+  top:10px;
+  right:10px;
+  background-color: #c82027;
+  color:white;
+  border-radius: 60%;
+}
+
+
+.article-list {
+    color:white;
+    margin-left: 10px;
+    padding: 1px;
+    text-align: left;
+}
+
+
+.newsItem {
+  color: white;
+  font-size: 0.85em;
+  margin-bottom: 3px;
+  list-style-type: none;
+  text-align: left;
+}
+
+.article-list:hover {
+  color:gold;
+}
+
+.attribution {
+  position: absolute;
+  top:10px;
+  right:10px;
+}
+
+.attributionG {
+  position: absolute;
+  top:75px;
+  right:10px;
+}
+
+
+.newsOnButton {
+  position: absolute;
+  top:150px;
+  right:10px;
+  border-radius: 100%;
+  width: 80px;
+  background-color: #fcd42b;
+  cursor:pointer;
+
+  }
+
+
+/*
+This provide changes to some of the key panels for mobile
+*/
+
+@media only screen
+and (max-width : 500px) {
+  #panot {
+      margin:auto;
+      width: 3px;
+      height: 3px;
+  }
+
+  #newsScreen {
+    position:absolute;
+    left: 10px;
+    bottom: 10px;
+    background-color: #1f1a4f;
+    width:200px;
+    height:300px;
+    color:white;
+    text-align: center;
+    padding: 3% 1% 1% 1%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+   }
+
+
+}
